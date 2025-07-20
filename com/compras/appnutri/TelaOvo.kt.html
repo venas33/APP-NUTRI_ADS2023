@@ -1,0 +1,51 @@
+<html>
+<head>
+<title>TelaOvo.kt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #bcbec4;}
+.s1 { color: #cf8e6d;}
+.s2 { color: #bcbec4;}
+.s3 { color: #6aab73;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+TelaOvo.kt</font>
+</center></td></tr></table>
+<pre>    <span class="s1">package </span><span class="s0">com</span><span class="s2">.</span><span class="s0">compras</span><span class="s2">.</span><span class="s0">appnutri</span>
+
+    <span class="s0">import android</span><span class="s2">.</span><span class="s0">annotation</span><span class="s2">.</span><span class="s0">SuppressLint</span>
+    <span class="s0">import android</span><span class="s2">.</span><span class="s0">os</span><span class="s2">.</span><span class="s0">Bundle</span>
+    <span class="s0">import android</span><span class="s2">.</span><span class="s0">text</span><span class="s2">.</span><span class="s0">Html</span>
+    <span class="s0">import android</span><span class="s2">.</span><span class="s0">text</span><span class="s2">.</span><span class="s0">method</span><span class="s2">.</span><span class="s0">LinkMovementMethod</span>
+    <span class="s0">import android</span><span class="s2">.</span><span class="s0">widget</span><span class="s2">.</span><span class="s0">TextView</span>
+    <span class="s0">import androidx</span><span class="s2">.</span><span class="s0">activity</span><span class="s2">.</span><span class="s0">enableEdgeToEdge</span>
+    <span class="s0">import androidx</span><span class="s2">.</span><span class="s0">appcompat</span><span class="s2">.</span><span class="s0">app</span><span class="s2">.</span><span class="s0">AppCompatActivity</span>
+    <span class="s0">import androidx</span><span class="s2">.</span><span class="s0">core</span><span class="s2">.</span><span class="s0">view</span><span class="s2">.</span><span class="s0">ViewCompat</span>
+    <span class="s0">import androidx</span><span class="s2">.</span><span class="s0">core</span><span class="s2">.</span><span class="s0">view</span><span class="s2">.</span><span class="s0">WindowInsetsCompat</span>
+
+    <span class="s1">class </span><span class="s0">TelaOvo : AppCompatActivity</span><span class="s2">() {</span>
+        <span class="s0">@SuppressLint</span><span class="s2">(</span><span class="s3">&quot;MissingInflatedId&quot;</span><span class="s2">)</span>
+        <span class="s0">override </span><span class="s1">fun </span><span class="s0">onCreate</span><span class="s2">(</span><span class="s0">savedInstanceState: Bundle?</span><span class="s2">) {</span>
+            <span class="s1">super</span><span class="s2">.</span><span class="s0">onCreate</span><span class="s2">(</span><span class="s0">savedInstanceState</span><span class="s2">)</span>
+
+            <span class="s0">enableEdgeToEdge</span><span class="s2">()</span>
+            <span class="s0">setContentView</span><span class="s2">(</span><span class="s0">R</span><span class="s2">.</span><span class="s0">layout</span><span class="s2">.</span><span class="s0">activity_tela_ovo</span><span class="s2">)</span>
+
+            <span class="s0">ViewCompat</span><span class="s2">.</span><span class="s0">setOnApplyWindowInsetsListener</span><span class="s2">(</span><span class="s0">findViewById</span><span class="s2">(</span><span class="s0">R</span><span class="s2">.</span><span class="s0">id</span><span class="s2">.</span><span class="s0">main</span><span class="s2">)) { </span><span class="s0">v</span><span class="s2">, </span><span class="s0">insets </span><span class="s2">-&gt;</span>
+                <span class="s1">val </span><span class="s0">systemBars </span><span class="s2">= </span><span class="s0">insets</span><span class="s2">.</span><span class="s0">getInsets</span><span class="s2">(</span><span class="s0">WindowInsetsCompat</span><span class="s2">.</span><span class="s0">Type</span><span class="s2">.</span><span class="s0">systemBars</span><span class="s2">())</span>
+                <span class="s0">v</span><span class="s2">.</span><span class="s0">setPadding</span><span class="s2">(</span><span class="s0">systemBars</span><span class="s2">.</span><span class="s0">left</span><span class="s2">, </span><span class="s0">systemBars</span><span class="s2">.</span><span class="s0">top</span><span class="s2">, </span><span class="s0">systemBars</span><span class="s2">.</span><span class="s0">right</span><span class="s2">, </span><span class="s0">systemBars</span><span class="s2">.</span><span class="s0">bottom</span><span class="s2">)</span>
+                <span class="s0">insets</span>
+            <span class="s2">}</span>
+
+            <span class="s1">val </span><span class="s0">textView: TextView </span><span class="s2">= </span><span class="s0">findViewById</span><span class="s2">(</span><span class="s0">R</span><span class="s2">.</span><span class="s0">id</span><span class="s2">.</span><span class="s0">textView03</span><span class="s2">)</span>
+            <span class="s0">textView</span><span class="s2">.</span><span class="s0">text </span><span class="s2">= </span><span class="s0">Html</span><span class="s2">.</span><span class="s0">fromHtml</span><span class="s2">(</span><span class="s3">&quot;&lt;a href='http://blog.gsuplementos.com.br/beneficios-do-ovo'&gt;Benefícios do Ovo&lt;/a&gt;&quot;</span><span class="s2">)</span>
+            <span class="s0">textView</span><span class="s2">.</span><span class="s0">movementMethod </span><span class="s2">= </span><span class="s0">LinkMovementMethod</span><span class="s2">.</span><span class="s0">getInstance</span><span class="s2">()</span>
+        <span class="s2">}</span>
+    <span class="s2">}</span>
+</pre>
+</body>
+</html>
